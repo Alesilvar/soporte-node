@@ -30,7 +30,7 @@ exports.handler = async (event) => {
             // Retornar la solicitud encontrada
             return {
                 statusCode: 200,
-                body: JSON.stringify(result.Item),
+                body: result.Item,
             };
         } else {
             // Retornar mensaje si no se encuentra

@@ -23,7 +23,7 @@ exports.handler = async (event) => {
         if (!getResult.Item) {
             return {
                 statusCode: 404,
-                body: JSON.stringify({ mensaje: 'Solicitud no encontrada' }),
+                body: { mensaje: 'Solicitud no encontrada' },
             };
         }
 

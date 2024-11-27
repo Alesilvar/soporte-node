@@ -51,7 +51,7 @@ exports.handler = async (event) => {
             body: {
                 message: "Solicitud de soporte creada correctamente",
                 data: item,
-            ),
+            },
         };
 
     } catch (error) {

@@ -51,9 +51,9 @@ exports.handler = async (event) => {
         // Responder con éxito
         return {
             statusCode: 200,
-            body: JSON.stringify({
+            body: {
                 message: `Solicitud ${ticket_id} del usuario ${usuario_id} se eliminó correctamente`,
-            }),
+            },
         };
     } catch (error) {
         // Manejo de errores

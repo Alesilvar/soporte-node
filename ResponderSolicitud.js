@@ -63,13 +63,13 @@ exports.handler = async (event) => {
         // Retornar la confirmación de la actualización
         return {
             statusCode: 200,
-            body: JSON.stringify({
+            body: {
                 usuario_id,
                 ticket_id,
                 response: responseText,
                 estado: 'respondido',
                 fecha_respuesta: fechaRespuesta,
-            }),
+            },
         };
     } catch (error) {
         console.error(`Error: ${error.message}`);

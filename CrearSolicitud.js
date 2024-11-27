@@ -48,10 +48,10 @@ exports.handler = async (event) => {
         // Respuesta de éxito
         return {
             statusCode: 200,
-            body: JSON.stringify({
+            body: {
                 message: "Solicitud de soporte creada correctamente",
                 data: item,
-            }),
+            ),
         };
 
     } catch (error) {

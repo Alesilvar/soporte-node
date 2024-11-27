@@ -15,7 +15,7 @@ exports.handler = async (event) => {
         // Retornar la lista de solicitudes
         return {
             statusCode: 200,
-            body: JSON.stringify(result.Items), // Convertir a JSON
+            body: result.Items, // Convertir a JSON
         };
     } catch (error) {
         console.error(`Error: ${error.message}`);

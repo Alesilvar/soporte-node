@@ -29,7 +29,7 @@ exports.handler = async (event) => {
         if (!result.Item) {
             return {
                 statusCode: 404,
-                body: JSON.stringify({ message: 'Solicitud no encontrada.' }),
+                body: { message: 'Solicitud no encontrada.' },
             };
         }
 
@@ -37,7 +37,7 @@ exports.handler = async (event) => {
         if (result.Item.estado === 'respondido') {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: 'La solicitud ya fue respondida.' }),
+                body: { message: 'La solicitud ya fue respondida.' },
             };
         }
 

@@ -35,14 +35,14 @@ exports.handler = async (event) => {
         if (estadoActual === 'respondido') {
             return {
                 statusCode: 400,
-                body: JSON.stringify({
+                body: {
                     mensaje: 'La solicitud ya fue respondida y no puede ser modificada.',
                     solicitud_anterior: {
                         Titulo: solicitudAnterior.Titulo || 'No disponible',
                         descripcion: solicitudAnterior.descripcion || 'No disponible',
                         respuesta: solicitudAnterior.respuesta || 'No disponible',
                     },
-                }),
+                },
             };
         }
 

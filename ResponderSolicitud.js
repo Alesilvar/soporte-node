@@ -14,7 +14,7 @@ exports.handler = async (event) => {
         if (!usuario_id || !ticket_id || !responseText) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Campos 'usuario_id', 'ticket_id' y 'response' son requeridos." }),
+                body: { message: "Campos 'usuario_id', 'ticket_id' y 'response' son requeridos." },
             };
         }
 

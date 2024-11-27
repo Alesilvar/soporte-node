@@ -14,9 +14,9 @@ exports.handler = async (event) => {
         if (!data.usuario_id || !data.Titulo || !data.descripcion) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({
+                body: {
                     error: "Campos 'usuario_id', 'Titulo' y 'descripcion' son obligatorios"
-                }),
+                },
             };
         }
 

@@ -86,10 +86,10 @@ exports.handler = async (event) => {
         // Retornar ambos JSON en la respuesta
         return {
             statusCode: 200,
-            body: JSON.stringify({
+            body: {
                 solicitud_anterior: solicitudAnteriorJson,
                 solicitud_modificada: solicitudModificada,
-            }),
+            },
         };
 
     } catch (error) {

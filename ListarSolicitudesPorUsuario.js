@@ -13,7 +13,7 @@ exports.handler = async (event) => {
         if (!usuario_id) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "'usuario_id' es requerido" }),
+                body: { message: "'usuario_id' es requerido" },
             };
         }
 

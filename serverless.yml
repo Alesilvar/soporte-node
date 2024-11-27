@@ -96,6 +96,8 @@ resources:
           - AttributeName: ticket_id
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true   
         GlobalSecondaryIndexes:
           - IndexName: estado-index
             KeySchema:

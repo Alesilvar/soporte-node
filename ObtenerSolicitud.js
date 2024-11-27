@@ -14,7 +14,7 @@ exports.handler = async (event) => {
         if (!usuario_id || !ticket_id) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "'usuario_id' y 'ticket_id' son requeridos" }),
+                body: { message: "'usuario_id' y 'ticket_id' son requeridos" },
             };
         }
 
@@ -36,7 +36,7 @@ exports.handler = async (event) => {
             // Retornar mensaje si no se encuentra
             return {
                 statusCode: 404,
-                body: JSON.stringify({ message: 'Solicitud no encontrada' }),
+                body: { message: 'Solicitud no encontrada' },
             };
         }
     } catch (error) {

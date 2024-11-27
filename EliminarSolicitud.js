@@ -33,10 +33,10 @@ exports.handler = async (event) => {
         if (!result.Item) {
             return {
                 statusCode: 404,
-                body: JSON.stringify({
+                body: {
                     error: 'Solicitud no encontrada',
                     details: `No se encontró una solicitud con usuario_id ${usuario_id} y ticket_id ${ticket_id}`,
-                }),
+                },
             };
         }
 

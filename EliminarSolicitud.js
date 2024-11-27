@@ -15,10 +15,10 @@ exports.handler = async (event) => {
         if (!usuario_id || !ticket_id) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({
+                body: {
                     error: 'Solicitud inválida',
                     details: 'usuario_id y ticket_id son obligatorios',
-                }),
+                },
             };
         }
 
